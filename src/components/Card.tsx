@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "../app/styles/card.css";
 
 interface propsType {
     title : string;
@@ -8,20 +9,20 @@ interface propsType {
 
 const Card : React.FC<propsType>= ({title, desc, tags}) => {
   return (
-    <div className='border border-accent w-[300px] sm:w-[350px]' data-aos="zoom-in-up">
+    <div className={`card ${window.innerWidth >= 640 ? 'card-sm' : ''}`} data-aos="zoom-in-up">
     
-       <div className='p-4 space-y-4'> 
-        <div className='text-4xl font-extralight'>{title}</div>
+       <div className='card-content'> 
+        <div className='card-title'>{title}</div>
         <div>{desc}</div>
         <div>
             {tags.map((el) => (
-                <div className='tags' key={el}>
+                <div className='card-tags' key={el}>
                 {el}
                 </div>))}
         </div>
        </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

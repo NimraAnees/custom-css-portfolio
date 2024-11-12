@@ -1,14 +1,16 @@
-import React from 'react'
-import Navbar from './Navbar'
+import React from 'react';
+import Navbar from './Navbar';
+import "../app/styles/hero.css";
 
 export const Hero = () => {
   return (
-    <div id='hero' className ='min-h-screen bg-no-repeat bg-[url(/banner_bg.png)]  bg-cover' style={{backgroundSize: "35%", backgroundPosition: "left 100px top 100px"}}>
+    <div id='hero' className ='hero-container'>
        <Navbar/>
-       <div className='container grid lg:grid-cols-2 h-[clac(100vh-60px)]'>
+       <div className='hero-content'>
         <div className='hidden lg:block'></div>
-        <div className='text-[80px] sm:text-[120px] font-bold leading-tight flex justify-center items-center'>
-          <div>
+        
+          <div className='hero-text'>
+            <div className='hero-msin'>
             <p data-aos="zoom-in-up">I'm</p>
             <p data-aos="zoom-in-up">Nimra</p>
             <p data-aos="zoom-in-up">Naz</p>
@@ -16,7 +18,7 @@ export const Hero = () => {
         </div>
        </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
