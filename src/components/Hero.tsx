@@ -11,7 +11,7 @@ export const Hero = () => {
         
           <div className='hero-text'>
             <div className='hero-msin'>
-            <p data-aos="zoom-in-up">I'm</p>
+            <p data-aos="zoom-in-up">I am</p>
             <p data-aos="zoom-in-up">Nimra</p>
             <p data-aos="zoom-in-up">Naz</p>
           </div>
